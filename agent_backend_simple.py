@@ -1139,9 +1139,10 @@ if __name__ == '__main__':
     print("💡 Built with SAM Framework structure for Aster Finance")
     print("🔑 Use X-Session-ID header for authenticated requests")
     print("")
-    
-    # For deployment, we'll run this as a module
-    if __name__ == "__main__":
-        app.run(host='0.0.0.0', port=5000, debug=False)
-    
-    return app
+
+def start_backend():
+    """Start the backend server."""
+    app.run(host='127.0.0.1', port=5000, debug=False, use_reloader=False)
+
+if __name__ == "__main__":
+    start_backend()

@@ -31,10 +31,11 @@ def run_backend():
     try:
         # Import and start backend
         sys.path.append(str(Path(__file__).parent))
-        from agent_backend_simple import app as backend_app
+        from agent_backend_simple import start_backend
         
-        # Run backend on port 5000
-        backend_app.run(host='127.0.0.1', port=5000, debug=False, use_reloader=False)
+        # Start the backend server
+        start_backend()
+        
     except Exception as e:
         logger.error(f"❌ Backend failed to start: {e}")
 
