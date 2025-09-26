@@ -1,0 +1,28 @@
+# Agent Asterix - AI Trading Platform Dependencies
+# Core web framework
+streamlit>=1.28.0
+flask>=2.3.0
+flask-cors>=4.0.0
+
+# HTTP and API
+requests>=2.31.0
+urllib3>=2.0.0
+
+# Data handling
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Async support
+asyncio-mqtt>=0.11.0
+
+# Logging and utilities
+python-dotenv>=1.0.0
+pathlib>=1.0.0
+
+# Security
+cryptography>=41.0.0
+hmac
+
+# Development
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
