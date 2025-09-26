@@ -18,7 +18,8 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Set environment variables for deployment
+# Set environment variables for deployment  
+# Railway will set PORT automatically, use that or default to 8514 for local
 PORT = int(os.environ.get("PORT", 8514))
 HOST = os.environ.get("HOST", "0.0.0.0")
 
@@ -82,6 +83,7 @@ def main():
     logger.info("=" * 55)
     logger.info(f"📡 Frontend will be available on {HOST}:{PORT}")
     logger.info(f"🔧 Backend will run internally on localhost:5000")
+    logger.info(f"🌐 Railway assigned port: {PORT}")
     logger.info("=" * 55)
     
     # Start backend in a separate thread
